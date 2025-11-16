@@ -1,0 +1,198 @@
+/* Page météo (weather.html) */
+.app-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 2rem 1.5rem 1rem;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.app-header::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 60%);
+	opacity: 0.8;
+	pointer-events: none;
+	animation: headerGlow 8s ease-in-out infinite;
+}
+
+.app-header-text {
+	max-width: 520px;
+}
+
+.search-section,
+.result-section,
+.back-section {
+	/* ...existing code... */
+}
+
+.search-section {
+	margin-bottom: 1.4rem;
+	padding: 1.4rem 1.2rem;
+	border-radius: 18px;
+	background: rgba(15, 23, 42, 0.9);
+	border: 1px solid #1f2937;
+	box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+	animation: sectionFadeIn 0.5s ease-out;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+}
+
+.search-helper {
+	margin-top: 0.7rem;
+	font-size: 0.8rem;
+	color: #9ca3af;
+}
+
+.result-section {
+	margin-top: 0.5rem;
+	animation: sectionFadeIn 0.5s ease-out;
+	animation-delay: 0.35s;
+	animation-fill-mode: both;
+}
+
+.back-section {
+	margin-top: 1.8rem;
+	text-align: center;
+	animation: sectionFadeIn 0.5s ease-out;
+	animation-delay: 0.45s;
+	animation-fill-mode: both;
+}
+
+/* Sections de présentation sur index.html */
+.presentation-section,
+.alerts-section,
+.quick-result-section {
+	/* ...existing code... */
+	animation: sectionFadeIn 0.5s ease-out;
+	animation-fill-mode: both;
+}
+
+.presentation-section {
+	animation-delay: 0.2s;
+}
+
+.alerts-section {
+	animation-delay: 0.1s;
+}
+
+.quick-result-section {
+	animation-delay: 0.3s;
+}
+
+/* Spécifique mobile pour certaines sections, si besoin */
+/* ...existing code... */
+
+/* Page d'accueil */
+.top-actions {
+	display: flex;
+	gap: 0.8rem;
+	margin-bottom: 1.5rem;
+}
+
+.home-highlight,
+.home-tips,
+.home-news {
+	margin-bottom: 1.5rem;
+	padding: 1.2rem 1.4rem;
+	border-radius: 18px;
+	background: rgba(15, 23, 42, 0.9);
+	border: 1px solid #1f2937;
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+	animation: sectionFadeIn 0.5s ease-out;
+	animation-fill-mode: both;
+}
+
+.home-highlight {
+	animation-delay: 0.15s;
+}
+
+.home-tips {
+	animation-delay: 0.25s;
+}
+
+.home-news {
+	animation-delay: 0.35s;
+}
+
+.home-list {
+	margin-top: 0.6rem;
+	margin-left: 1.2rem;
+	font-size: 0.9rem;
+	color: #e5e7eb;
+	line-height: 1.5;
+}
+
+.home-list li {
+	margin-bottom: 0.3rem;
+}
+
+.home-note {
+	margin-top: 0.6rem;
+	font-size: 0.85rem;
+	color: #9ca3af;
+}
+
+/* Cartes de conseils météo */
+.home-tips-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.9rem;
+	margin-top: 0.8rem;
+}
+
+.home-tip-card {
+	padding: 0.9rem 1rem;
+	border-radius: 14px;
+	background: radial-gradient(circle at top left, #0f172a, #020617);
+	border: 1px solid #1f2937;
+	box-shadow: 0 8px 18px rgba(15, 23, 42, 0.6);
+}
+
+.home-tip-card h3 {
+	font-size: 0.95rem;
+	font-weight: 600;
+	margin-bottom: 0.3rem;
+	color: #e5e7eb;
+}
+
+.home-tip-card p {
+	font-size: 0.85rem;
+	color: #cbd5f5;
+	line-height: 1.5;
+}
+
+/* Responsive pour la grille de conseils */
+@media (max-width: 768px) {
+	.home-tips-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Animation des sections */
+@keyframes sectionFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes headerGlow {
+	0%,
+	100% {
+		opacity: 0.3;
+		transform: translateY(0);
+	}
+	50% {
+		opacity: 0.6;
+		transform: translateY(-4px);
+	}
+}

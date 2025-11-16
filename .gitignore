@@ -1,0 +1,12 @@
+# Go
+backend/bin/
+backend/vendor/
+backend/.env
+
+# Node / Front
+node_modules/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db

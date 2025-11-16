@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Weather App - Météo par ville</title>
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<link rel="icon" href="./assets/icons/favicon.ico" />
+</head>
+<body>
+	<div class="app-container">
+		<header class="app-header">
+			<div class="app-logo-circle">
+				<span class="app-logo-icon">🌦️</span>
+			</div>
+			<div class="app-header-text">
+				<h1 class="app-title">Météo par ville / village</h1>
+				<p class="app-subtitle">
+					Choisis une ville ou un village et consulte instantanément la météo actuelle.
+				</p>
+			</div>
+		</header>
+
+		<main class="app-main">
+			<section class="search-section">
+				<h2 class="section-title">Rechercher une ville ou un village</h2>
+				<p class="section-description">
+					Tape le nom d’une ville (par exemple <strong>Paris</strong>,
+					<strong>Lyon</strong>, <strong>Marseille</strong>, ou une ville à
+					l’étranger comme <strong>New York</strong> ou
+					<strong>Tokyo</strong>) puis clique sur
+					<strong>Voir la météo</strong>.
+				</p>
+
+				<div id="search">
+					<input
+						id="city-input"
+						type="text"
+						placeholder="Ex : Paris, Lyon, Marseille..."
+						autocomplete="off"
+					/>
+					<button id="search-btn">Voir la météo</button>
+				</div>
+
+				<p id="search-helper" class="search-helper">
+					Nous utilisons l’API <strong>WeatherAPI.com</strong> pour récupérer les
+					données en temps réel (température en °C et conditions).
+				</p>
+			</section>
+
+			<section class="result-section">
+				<div id="result" class="status-message">
+					Saisis une ville pour afficher la météo. La carte ci-dessous se mettra à jour
+					avec la température actuelle et la description des conditions (ciel dégagé,
+					NUAGEUX, pluie, etc.).
+				</div>
+			</section>
+
+			<section class="back-section">
+				<p class="section-description">
+					Une fois ta consultation terminée, tu peux revenir à la page d’accueil
+					pour lire la présentation du projet ou ajouter de nouvelles idées
+					d’évolution.
+				</p>
+				<button
+					class="secondary-button"
+					onclick="window.location.href='./index.html';"
+				>
+				 ⟵ Retour à l’accueil
+				</button>
+			</section>
+		</main>
+
+		<footer class="app-footer">
+			<p>
+				Données météo par
+				<a href="https://www.weatherapi.com/" target="_blank" rel="noreferrer">
+					WeatherAPI.com
+				</a>
+			</p>
+		</footer>
+	</div>
+	<script src="./assets/js/app.js"></script>
+</body>
+</html>
