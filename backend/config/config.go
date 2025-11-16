@@ -30,7 +30,6 @@ func Load(envPath ...string) error {
 	return nil
 }
 
-// GetWeatherAPIKey retourne la clé WeatherAPI depuis l'environnement.
 func GetWeatherAPIKey() (string, error) {
 	key := os.Getenv("WEATHER_API_KEY")
 	if key == "" {

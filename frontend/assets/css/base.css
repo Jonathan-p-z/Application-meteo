@@ -1,4 +1,3 @@
-/* Reset général, polices, couleurs globales */
 *,
 *::before,
 *::after {
@@ -30,7 +29,6 @@ body {
 	}
 }
 
-/* Titres / textes globaux */
 .app-title {
 	font-size: 1.8rem;
 	font-weight: 700;
