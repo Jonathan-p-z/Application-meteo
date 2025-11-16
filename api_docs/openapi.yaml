@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+  title: Weather App API
+  version: 1.0.0
+paths:
+  /api/health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+  /api/weather:
+    get:
+      summary: Get weather for a city
+      parameters:
+        - in: query
+          name: city
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Weather data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WeatherResponse'
+components:
+  schemas:
+    WeatherResponse:
+      type: object
+      properties:
+        city:
+          type: string
+        temperature:
+          type: number
+        condition:
+          type: string

@@ -1,0 +1,54 @@
+/* Reset général, polices, couleurs globales */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: radial-gradient(circle at top, #020617, #020617 45%, #0b1120 100%);
+	color: #ffffff;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	animation: pageFadeIn 0.5s ease-out;
+}
+
+@keyframes pageFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Titres / textes globaux */
+.app-title {
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.section-title {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #ffffff;
+	margin-bottom: 0.3rem;
+}
+
+.app-subtitle,
+.section-description,
+.presentation-text,
+.home-text {
+	font-size: 0.9rem;
+	color: #e5e7eb;
+	line-height: 1.5;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Weather App - Accueil</title>
+	<link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+	<div class="app-shell">
+		<header class="site-header">
+			<div class="header-left">
+				<div class="app-logo-circle">
+					<span class="app-logo-icon">🌙</span>
+				</div>
+				<div class="app-header-text">
+					<h1 class="app-title">Weather App</h1>
+					<p class="app-subtitle">
+						Retrouve en un coup d’œil les infos météo essentielles.
+					</p>
+				</div>
+			</div>
+		</header>
+
+		<main class="app-main">
+			<section class="top-actions">
+				<button
+					class="primary-button"
+					id="france-btn"
+					type="button"
+					onclick="window.location.href='./weather.html';"
+				>
+					Consulter la météo d’une ville
+				</button>
+			</section>
+
+			<section class="home-highlight">
+				<h2 class="section-title">Aperçu météo du jour</h2>
+				<p class="section-description">
+					Les conditions météo peuvent varier rapidement selon la région. Pense à vérifier
+					la météo avant de sortir, surtout si tu as prévu des activités en extérieur.
+				</p>
+				<ul class="home-list">
+					<li>Températures plus fraîches le matin, plus douces en journée.</li>
+					<li>Risque de pluie ou d’averses locales selon les zones.</li>
+					<li>Vent parfois soutenu en altitude ou près du littoral.</li>
+				</ul>
+				<p class="home-note">
+					Pour une vue précise ville par ville, utilise le bouton ci-dessus.
+				</p>
+			</section>
+
+			<section class="home-tips">
+				<h2 class="section-title">Conseils météo du moment</h2>
+				<div class="home-tips-grid">
+					<div class="home-tip-card">
+						<h3>En cas de pluie</h3>
+						<p>
+							Prévois un vêtement imperméable et des chaussures adaptées. Évite les zones
+							inondables et les sous-sols en cas de fortes averses.
+						</p>
+					</div>
+					<div class="home-tip-card">
+						<h3>En cas de chaleur</h3>
+						<p>
+							Hydrate-toi régulièrement, limite les efforts en plein après-midi et
+							protège-toi du soleil (chapeau, lunettes, crème solaire).
+						</p>
+					</div>
+					<div class="home-tip-card">
+						<h3>En cas de vent fort</h3>
+						<p>
+							Fixe les objets susceptibles de s’envoler, sois prudent à proximité des
+							arbres et évite les activités en montagne exposée.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="home-news">
+				<h2 class="section-title">Infos météo utiles</h2>
+				<ul class="home-list">
+					<li>
+						Les prévisions changent régulièrement : consulte la météo le jour même
+						avant un long trajet.
+					</li>
+					<li>
+						Un indice UV élevé peut être présent même par temps voilé : surveille
+						les valeurs annoncées.
+					</li>
+					<li>
+						En hiver, attention au verglas tôt le matin, même si la température
+						est légèrement positive.
+					</li>
+				</ul>
+				<p class="home-note">
+					Les données détaillées (température, humidité, vent, etc.) sont disponibles
+					pour chaque ville dans la page météo.
+				</p>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<p>
+				Weather App – Données météo par
+				<a href="https://www.weatherapi.com/" target="_blank" rel="noreferrer">
+					WeatherAPI.com
+				</a>
+			</p>
+		</footer>
+	</div>
+
+	<script src="./assets/js/app.js"></script>
+</body>
+</html>
